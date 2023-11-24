@@ -1,0 +1,175 @@
+{% extends "base.html" %} {% block title %} Result {% endblock %}
+{% block content %}
+    <div class="container-fluid main-container">
+        <div class="row">
+            <main class="col-md-10 mx-md-auto p-4 pt-2 pt-md-4">
+                <div class="row g-3">
+                    <div class="col-12 text-center mb-md-4 mt-4">
+                        <h5 style="color: #01c282; font-size: 30px;">Completed!</h5>
+                    </div>
+                    <div class="col-md-12 text-center d-none d-md-flex progress-bar-profile">
+                        <div class="col-md profile-progress-container wrapper" id="step-1">
+                            <div class="profile-progress">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <p class="text-center my-2 small">Personal Information</p>
+                        </div>
+                        <div class="col-md profile-progress-container wrapper" id="step-2">
+                            <div class="profile-progress">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <p class="text-center my-2 small">Academic Grades Background</p>
+                        </div>
+                        <div class="col-md profile-progress-container wrapper" id="step-3">
+                            <div class="profile-progress">
+                                <i class="fa-solid fa-file"></i>
+                            </div>
+                            <p class="text-center my-2 small">Result</p>
+                        </div>
+                    </div>
+
+                    <div id='result' class="col-12 col-md-11 profile-screen mt-0 mt-md-3 mx-auto">
+                        <div class="mt-3 mt-md-0">
+                            <div class="card-profile p-4 mt-3" style="margin: auto; border: 3px solid rgb(102, 210, 69); border-radius: 2rem; width: 100%;">
+                                <div class="row">
+                                    <div style="width: 100%; display: flex; justify-content: space-between;">
+                                        <p><strong>Recommended Courses:</strong></p> 
+                                        <p><strong>Hello, {{ first_name }} {{ last_name }}</strong></p>
+                                    </div>
+                            
+                                    <ol>
+                                        {% if recommended_courses_with_description %}
+                                            {% with first_recommendation=recommended_courses_with_description.0 %}
+                                                <li>
+                                                    <strong>{{ first_recommendation.0 }}</strong> 
+                                                    <span style="opacity: 0.7; margin-right: 20px;"> {{ first_recommendation.2 }}</span>
+                                                </li>
+                                                <p style="text-align: justify; margin: 0;">{{ description }}</p>
+                                                <p style="text-align: justify; margin: 0;"> {{ first_recommendation.1 }}</p>
+                                                <p id="analysis_1">{{ analysis.0 }}</p> <!-- Placeholder for the analysis -->
+                                            {% endwith %}
+
+                                            {% with second_recommendation=recommended_courses_with_description.1 %}
+                                            <li>
+                                                <strong>{{ second_recommendation.0}}</strong> 
+                                                <span style="opacity: 0.7; margin-right: 20px;"> {{ second_recommendation.2 }}</span>    
+                                            </li> 
+                                                <p style="text-align: justify; margin: 0;">{{ message }}{{ description }}</p>
+                                                <p id="analysis_2">{{ analysis.1}}</p>
+                                                {% endwith %}
+
+                                            {% with third_recommendation=recommended_courses_with_description.2 %}
+                                            <li>
+                                                <strong>{{ third_recommendation.0}}</strong> 
+                                                <span style="opacity: 0.7; margin-right: 20px;"> {{ third_recommendation.2 }}</span>    
+                                            </li> 
+                                                <p style="text-align: justify;  margin: 0;">{{ message }}{{ description }}</p>
+                                                <p id="analysis_2">{{ analysis.2}}</p>
+                                                {% endwith %}
+                                            {% endif %}
+                                    </ol>
+                                                <script>
+                                                    // Make an asynchronous request to GPT-3 for the analysis
+                                                    fetch(`/get_analysis/?course=${course}&index={{ forloop.counter }}`)
+                                                        .then(response => response.json())
+                                                        .then(data => {
+                                                            // Replace the placeholder with the generated analysis
+                                                            document.getElementById(`analysis_{{ forloop.counter }}`).innerText = data.analysis;
+                                                        });
+                                                </script>
+                                           
+                                    
+
+                                        <div style="width: 100%; display: flex; justify-content: space-between;">
+                                            <a href="{% url 'recommend' %}" class="mt-2 btn btn-lg btn-success background-color-green btn-font m-0" style="font-size: 17px;">Try Again</a>
+                                            <a href="{% url 'pdf' prediction_id %}" class="mt-2 btn btn-lg btn-success background-color-green btn-font m-0" style="font-size: 17px;">View PDF</a>
+                                        </div>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </main>
+        </div>
+    </div>
+    <style>
+        .main-container{
+            margin-top: 72px;
+            }
+            
+            .profile-progress {
+            width: 50px;
+            height: 50px;
+            padding: 10px;
+            background-color: #01c282;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            }
+            
+            .profile-progress-container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: flex-start;
+            align-items: center;
+            }
+            
+            .profile-progress-container i.bx{
+            color: white;
+            font-size: 22px;
+            }
+            
+            .profile-progress-container i.fa-solid{
+            color: white;
+            font-size: 16px;
+            }
+            
+            .profile-progress-container.wrapper::before {
+            content: '';
+            position: relative;
+            top: 30px;
+            left: -50%;
+            border-top: 0.3rem solid #01c282;
+            width: 100%;
+            z-index: -1;
+            }
+            
+            .profile-progress-container.wrapper-green::before {
+            content: '';
+            position: relative;
+            top: 30px;
+            left: -50%;
+            border-top: 0.3rem solid #01c282;
+            width: 100%;
+            z-index: -1;
+            }
+            
+            .progress-bar-profile>*:first-child::before {
+            width: 0;
+            }
+
+            
+
+
+
+
+    </style>
+   {% comment %} <script>
+        // Make an asynchronous request to GPT-3 for the analysis
+        fetch('/get_analysis/?course={{ course }}')
+            .then(response => response.json())
+            .then(data => {
+                // Replace the placeholder with the generated analysis
+                document.getElementById('analysis_{{ forloop.counter }}').innerText = data.analysis;
+            });
+    </script> {% endcomment %}
+   
+
+{% endblock %}

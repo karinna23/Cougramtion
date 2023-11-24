@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+   
+
+      <!-- Landing Page -->
+    <link rel="stylesheet" href="{% static 'css/templatemo_style.css' %}">
+    {% comment %} <link rel="stylesheet" href="css/templatemo_misc.css"> {% endcomment %}
+
+     <!-- Progressbar-->
+    <link rel="stylesheet" href="{% static 'css/progressbar.css' %}">
+
+    <title>{% block title %}  {% endblock %}</title>
+
+    <!-- Bootstrap CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+
+ <!-- SASS -->
+ <link href="{% static "css/sass/style.css" %}" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Landing Page -->    
+  <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+  
+
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+  <!-- JS bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/30ff5f2a0c.js" crossorigin="anonymous"></script>
+
+
+  
+  
+</head>
+<body>
+  
+    {% include "includes/header.html" %}
+    
+    {% block content %}
+    
+    {% endblock %}
+
+</body>
+</html>
+    
+
+
+   
+

@@ -1,0 +1,635 @@
+{% extends "base.html" %} {% block title %} Home {% endblock %}
+{% block content %}
+{% load static%}
+
+    <body class="main">
+            <div class="site-slider">
+                <div class="slider">
+                    <div class="flexslider">
+                        <ul class="slides" style="padding: 0;">
+                            <li>
+                                <div class="overlay"></div>
+                                <img src="{% static 'images/wmsuheader.jpg' %}" alt="">
+                                <div class="slider-caption visible-md visible-lg">
+                                    <h2>CouGramTion</h2>
+                                    <p>Get to know what course you're suitable for!</p>
+                                    <a href="Recommend" class="slider-btn" style="text-decoration: none;">Get Started!</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> <!-- /.flexslider -->
+                </div> <!-- /.slider -->
+            </div> <!-- /.site-slider -->
+        </div> <!-- /.site-main -->
+
+
+        <div class="content-section" id="features">
+            <div class="container">
+                <div class="row">
+                    <div class="heading-section col-md-12 text-center">
+                        <h2>Features</h2>
+                    </div> <!-- /.heading-section -->
+                </div> <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item" id="service-1">
+                            <div class="service-icon">
+                                <i class="fa fa-desktop" style="font-size: 30px;"></i>
+                            </div> <!-- /.service-icon -->
+                            <div class="service-content">
+                                <div class="inner-service">
+                                   <h3>Machine Learning</h3>
+                                   <p>Our Website is integrated with Machine Learning.</p> 
+                                </div>
+                            </div> <!-- /.service-content -->
+                        </div> <!-- /#service-1 -->
+                    </div> <!-- /.col-md-3 -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item" id="service-2">
+                            <div class="service-icon">
+                                <i class="fa fa-file-pdf-o" style="font-size: 30px;"></i>
+                            </div> <!-- /.service-icon -->
+                            <div class="service-content">
+                                <div class="inner-service">
+                                   <h3>Downloadable Result</h3>
+                                   <p>The results can be view through pdf, you have the choice to download the result in pdf form with the purpose of future use.</p> 
+                                </div>
+                            </div> <!-- /.service-content -->
+                        </div> <!-- /#service-1 -->
+                    </div> <!-- /.col-md-3 -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item" id="service-3">
+                            <div class="service-icon">
+                                <i class="fa fa-book" style="font-size: 30px;"></i>
+                            </div> <!-- /.service-icon -->
+                            <div class="service-content">
+                                <div class="inner-service">
+                                   <h3>Recommend Course</h3>
+                                   <p>The system can Recommend Three (3) Course, base on the pattern of the data collected. The Model will use an algorithm to check a pattern of the input and seek for with course
+                                    that has the most similar input base on the data.</p> 
+                                </div>
+                            </div> <!-- /.service-content -->
+                        </div> <!-- /#service-1 -->
+                    </div> <!-- /.col-md-3 -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item" id="service-4">
+                            <div class="service-icon">
+                                <i class="fa fa-key" style="font-size: 30px;"></i>
+                            </div> <!-- /.service-icon -->
+                            <div class="service-content">
+                                <div class="inner-service">
+                                   <h3>Easy Access</h3>
+                                   <p>Our system will not require the user to make an account to be able to use its features.</p> 
+                                </div>
+                            </div> <!-- /.service-content -->
+                        </div> <!-- /#service-1 -->
+                    </div> <!-- /.col-md-3 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /#services -->
+
+
+
+        <div class="content-section" id="courses">
+            <div class="container">
+                <div class="row">
+                    <div class="heading-section col-md-12 text-center">
+                        <h2>Colleges</h2>
+                        <p>Western Mindanao State University</p>
+                    </div> <!-- /.heading-section -->
+                </div> <!-- /.row -->
+                <div class="row">
+                    <div class="portfolio-item col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="{% static 'images/gallery/cte.jpeg' %}" alt="">
+                            <div class="portfolio-overlay"  >
+                                <h3>College of Teacher Education</h3>
+                                <p>B ELEMENTARY EDUCATION
+                                    <br>B SECONDARY EDUCATION
+                                    <br>B CULTURE AND ARTS EDUCATION
+                                    <br>B SPECIAL NEED EDUCATION
+                                    <br>B EARLY CHILDHOOD EDUCATION</p>
+                                <a href="{% static 'images/gallery/ctebldg.JPG' %}" data-rel="lightbox" class="expand">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div> <!-- /.portfolio-overlay -->
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.portfolio-item -->
+                    <div class="portfolio-item col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="{% static 'images/gallery/coe.png' %}" alt="">
+                            <div class="portfolio-overlay">
+                                <h3>College of Engineering</h3>
+                                <p class="visible-content">BS CIVIL ENGINEERING
+                                    <br>BS MECHANICAL ENGINEERING
+                                    <br>BS COMPUTER ENGINEERING
+                                    <br>BS ELECTRICAL ENGINEERING
+                                    <br>BS GEODETIC ENGINEERING
+                                    <br>BS ENVIRONMENTAL ENGINEERING</p>
+                            
+                                <div class="hidden-content">
+                                    <p>BS INDUSTRIAL ENGINEERING
+                                        <br>BS INDUSTRIAL ENGINEERING
+                                        <br>BS AGRICULTURAL BIOSYSTEM ENGINEERING
+                                        <br>BS ELECTRONICS COMMUNICATION ENGINEERING
+                                        </p>
+                                </div>
+                                <button class="see-less-btn">See Less</button>
+                                <button class="see-more-btn">See More</button>
+                                <a href="{% static 'images/gallery/coebldg.jpg' %}" data-rel="lightbox" class="expand">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div> <!-- /.portfolio-overlay -->
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.portfolio-item -->
+                    <div class="portfolio-item col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="{% static 'images/gallery/che.png' %}" alt="">
+                            <div class="portfolio-overlay">
+                                <h3>College Of Home Economics</h3>
+                                <p>BS HOME ECONOMICS
+                                    <br>BS NUTRITION AND DIETETICS
+                                    <br>BS HOSPITALITY MANAGEMENT</p>
+                                <a href="{% static 'images/gallery/chebldg.JPG' %}" data-rel="lightbox" class="expand">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div> <!-- /.portfolio-overlay -->
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.portfolio-item -->
+                    <div class="portfolio-item col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="{% static 'images/gallery/cn.png' %}" alt="">
+                            <div class="portfolio-overlay">
+                                <h3>College Of Nursing</h3>
+                                <p>BS NURSING.</p>
+                                <a href="{% static 'images/gallery/cnbldg.jpg' %}" data-rel="lightbox" class="expand">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div> <!-- /.portfolio-overlay -->
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.portfolio-item -->
+                    <div class="portfolio-item col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="{% static 'images/gallery/cla.jpeg' %}" alt="">
+                            <div class="portfolio-overlay">
+                                <h3>College Of Liberal Arts</h3>
+                                <p class="visible-content">AB BROADCASTING
+                                   <br>AB JOURNALISM
+                                   <br>B SINING SA FILIPINO
+                                   <br>BS ECONOMICS
+                                   <br>AB HISTORY 
+                                   <br>AB POLITICAL SCIENCE 
+                                   
+                                <div class="hidden-content">
+                                    <p>BS ACCOUNTANCY
+                                    <br>BS PYSCHOLOGY
+                                    <br>BA ENGLISH LANGUAGE STUDIES
+                                    </p>
+                                </div>
+                                <button class="see-less-btn">See Less</button>
+                                <button class="see-more-btn">See More</button>
+                                <a href="{% static 'images/gallery/clabldg.jpg' %}" data-rel="lightbox" class="expand">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div> <!-- /.portfolio-overlay -->
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.portfolio-item -->
+                    <div class="portfolio-item col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="{% static 'images/gallery/CA.jpeg' %}" alt="">
+                            <div class="portfolio-overlay">
+                                <h3>College Of Architecture</h3>
+                                <p>BS Architecture</p>
+                                <a href="{% static 'images/gallery/cabldg.JPG' %}" data-rel="lightbox" class="expand">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div> <!-- /.portfolio-overlay -->
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.portfolio-item -->
+                    <div class="portfolio-item col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="{% static 'images/gallery/ccs.jpg' %}" alt="">
+                            <div class="portfolio-overlay">
+                                <h3>College Of Computing Studies</h3>
+                                <p> BS COMPUTER SCIENCE
+                                    <br>BS INFORMATION TECHNOLOGY</p>
+                                <a href="{% static 'images/gallery/ccsbldg.JPG' %}" data-rel="lightbox" class="expand">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div> <!-- /.portfolio-overlay -->
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.portfolio-item -->
+                    <div class="portfolio-item col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="{% static 'images/gallery/ccje.jpeg' %}" alt="">
+                            <div class="portfolio-overlay">
+                                <h3>College Of Criminal Justice Education</h3>
+                                <p>BS CRIMINOLOGY</p>
+                                <a href="{% static 'images/gallery/ccje.JPG' %}" data-rel="lightbox" class="expand">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div> <!-- /.portfolio-overlay -->
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.portfolio-item -->
+                    <div class="portfolio-item col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="{% static 'images/gallery/cais.jpeg' %}" alt="">
+                            <div class="portfolio-overlay">
+                                <h3>College Of Asian and Islamic Studies</h3>
+                                <p>BA ASIAN STUDIES
+                                    <br>BA ISLAMIC STUDIES</p>
+                                <a href="{% static 'images/gallery/caisbldg.JPG' %}" data-rel="lightbox" class="expand">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div> <!-- /.portfolio-overlay -->
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.portfolio-item -->
+                    <div class="portfolio-item col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="{% static 'images/gallery/cpads.jpeg' %}" alt="">
+                            <div class="portfolio-overlay">
+                                <h3>College Of Public Administration and Development Studies</h3>
+                                <p>BPUBLIC AND ADMINISTRATION.</p>
+                                <a href="{% static 'images/gallery/cpadsbldg.JPG' %}" data-rel="lightbox" class="expand">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div> <!-- /.portfolio-overlay -->
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.portfolio-item -->
+                    <div class="portfolio-item col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="{% static 'images/gallery/csspe.jpeg' %}" alt="">
+                            <div class="portfolio-overlay">
+                                <h3>College Of Sport Science and Physical Education</h3>
+                                <p>BS PHYSICLA EDUCATION
+                                    <br>BS EXERCISE AND SPORT SCIENCE</p>
+                                <a href="{% static 'images/gallery/csspebldg.JPG' %}" data-rel="lightbox" class="expand">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div> <!-- /.portfolio-overlay -->
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.portfolio-item -->
+                    <div class="portfolio-item col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="{% static 'images/gallery/csm.jpeg' %}" alt="">
+                            <div class="portfolio-overlay">
+                                <h3>College Of Science and Mathematics</h3>
+                                <p>BS BIOLOGY
+                                    <br>BS CHEMISTRY
+                                    <br>BS MATHEMATICS
+                                    <br>BS STATISTICS
+                                    <br>BS PHYSICS</p>
+                                <a href="{% static 'images/gallery/csmbldg.JPG' %}" data-rel="lightbox" class="expand">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div> <!-- /.portfolio-overlay -->
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.portfolio-item -->
+                    <div class="portfolio-item col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="{% static 'images/gallery/cswcd.jpeg' %}" alt="">
+                            <div class="portfolio-overlay">
+                                <h3>College Of Social Works and Community Development</h3>
+                                <p>BS SOCIAL WORK
+                                    <br>BS COMMUNITY DEVELOPMENT</p>
+                                <a href="{% static 'images/gallery/cswcdbldg.JPG' %}" data-rel="lightbox" class="expand">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div> <!-- /.portfolio-overlay -->
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.portfolio-item -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /#portfolio -->
+        
+        <div class="content-section" id="about us">
+            <div class="container">
+                <div class="row">
+                    <div class="heading-section col-md-12 text-center">
+                        <h2>About Us</h2>
+                    </div> <!-- /.heading-section -->
+                </div> <!-- /.row -->
+        </div> <!-- /.row -->
+        <div class="row"style="width: 100%; text-align: justify;">
+            <!-- What is CouGramTion? -->
+            <div class="col-md-6">
+                <div class="p-4">
+                    <h2 class="text-center mb-4">What is CouGramTion?</h2>
+                    <p>
+                        CouGramTion is an innovative and intelligent course recommendation system designed to revolutionize the way students plan their academic journeys. Guided by cutting-edge machine learning algorithms, CouGramTion analyzes diverse data points, including academic performance and personal attributes, to predict and recommend tailored courses for incoming first-year students at Western Mindanao State University.
+                    </p>
+                </div>
+            </div>
+        
+            <!-- How it works? -->
+            <div class="col-md-6">
+                <div class="p-4">
+                    <h2 class="text-center mb-4">How it works?</h2>
+                    <p>
+                        By seamlessly integrating student data and advanced algorithms, CouGramTion accurately recommends the ideal courses for each student. Students simply sign up, provide their information, and CouGramTion does the rest. With CouGramTion, students can confidently embark on their educational paths, equipped with personalized course recommendations that align with their interests, strengths, and aspirations.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="content-section" id="our-team">
+            <div class="container">
+                <div class="row">
+                    <div class="heading-section col-md-12 text-center">
+                        <h2>Team</h2>
+                    </div> <!-- /.heading-section -->
+                </div> <!-- /.row -->
+                <div class="row">
+                    <div class="team-member col-md-3 col-sm-6">
+                        <div class="member-thumb">
+                            <img src="{% static 'images/faseeh.jpg' %}" alt="">
+                            <div class="team-overlay">
+                                <h3>Faseeh Aukasa</h3>
+                                <span>Full Stack Developer</span>
+                                <ul class="social">
+                                    <li><a href="https://www.facebook.com/aukasa.property/" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-envelope"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div> <!-- /.team-overlay -->
+                        </div> <!-- /.member-thumb -->
+                    </div> <!-- /.team-member -->
+                    <div class="team-member col-md-3 col-sm-6">
+                        <div class="member-thumb">
+                            <img src="{% static 'images/kurt.jpg' %}" alt="">
+                            <div class="team-overlay">
+                                <h3>Kurt Ira Pobre</h3>
+                                <span>Documentation Specialist</span>
+                                <span>UI Designer</span>
+                                <ul class="social">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-envelope"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div> <!-- /.team-overlay -->
+                        </div> <!-- /.member-thumb -->
+                    </div> <!-- /.team-member -->
+                    <div class="team-member col-md-3 col-sm-6">
+                        <div class="member-thumb">
+                            <img src="{% static 'images/fenny.jpg' %}" alt="">
+                            <div class="team-overlay">
+                                <h3>Fenny Segovia</h3>
+                                <span>Documentation Specialist</span>
+                                <span>UI Designer</span>
+                                <ul class="social">
+                                    <li><a href="https://www.facebook.com/segovia.fenny?mibextid=2JQ9oc " class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-envelope"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div> <!-- /.team-overlay -->
+                        </div> <!-- /.member-thumb -->
+                    </div> <!-- /.team-member -->
+                </div> <!-- /#our-team -->
+
+                
+
+                <div id="footer">
+                    <a href="#" id="go-top">Back to top</a>
+                </div> <!-- /#footer -->
+            </div>
+        </div>
+        
+        <!-- templatemo 406 flex -->
+    </body>
+</html>
+
+<script>
+    var seeMoreBtns = document.querySelectorAll('.see-more-btn');
+        var seeLessBtns = document.querySelectorAll('.see-less-btn');
+        var hiddenContents = document.querySelectorAll('.hidden-content');
+        var visibleContents = document.querySelectorAll('.visible-content');
+
+        seeMoreBtns.forEach(function(seeMoreBtn, index) {
+            seeMoreBtn.addEventListener('click', function() {
+                hiddenContents[index].style.display = 'block';
+                visibleContents[index].style.display = 'none';
+                seeMoreBtn.style.display = 'none';
+                seeLessBtns[index].style.display = 'inline';
+            });
+        });
+
+        seeLessBtns.forEach(function(seeLessBtn, index) {
+            seeLessBtn.addEventListener('click', function() {
+                hiddenContents[index].style.display = 'none';
+                visibleContents[index].style.display = 'block';
+                seeMoreBtns[index].style.display = 'inline';
+                seeLessBtn.style.display = 'none';
+            });
+        });
+
+        (function ($) {
+
+            'use strict';
+        
+            $.fn.lightbox = function (options) {
+        
+                var opts = {
+                    margin: 50,
+                    nav: true,
+                    blur: true,
+                    minSize: 0
+                };
+        
+                var plugin = {
+        
+                    items: [],
+                    lightbox: null,
+                    image: null,
+                    current: null,
+                    locked: false,
+                    caption: null,
+              
+                    init: function (items) {
+                        plugin.items = items;
+                plugin.selector = "lightbox-"+Math.random().toString().replace('.','');
+        
+                        if (!plugin.lightbox) {
+                            $('body').append(
+                              '<div id="lightbox" style="display:none;">'+
+                              '<a href="#" class="lightbox-close lightbox-button"></a>' +
+                              '<div class="lightbox-nav">'+
+                              '<a href="#" class="lightbox-previous lightbox-button"></a>' +
+                              '<a href="#" class="lightbox-next lightbox-button"></a>' +
+                              '</div>' +
+                              '<div href="#" class="lightbox-caption"><p></p></div>' +
+                              '</div>'
+                            );
+        
+                            plugin.lightbox = $("#lightbox");
+                            plugin.caption = $('.lightbox-caption', plugin.lightbox);
+                        }
+        
+                        if (plugin.items.length > 1 && opts.nav) {
+                            $('.lightbox-nav', plugin.lightbox).show();
+                        } else {
+                            $('.lightbox-nav', plugin.lightbox).hide();
+                        }
+        
+                        plugin.bindEvents();
+        
+                    },
+        
+                    loadImage: function () {
+                        if(opts.blur) {
+                            $("body").addClass("blurred");
+                        }
+                        $("img", plugin.lightbox).remove();
+                        plugin.lightbox.fadeIn('fast').append('<span class="lightbox-loading"></span>');
+        
+                        var img = $('<img src="' + $(plugin.current).attr('href') + '" draggable="false">');
+        
+                        $(img).load(function () {
+                            $('.lightbox-loading').remove();
+                            plugin.lightbox.append(img);
+                            plugin.image = $("img", plugin.lightbox).hide();
+                            plugin.resizeImage();
+                            plugin.setCaption();
+                        });
+                    },
+        
+                    setCaption: function () {
+                        var caption = $(plugin.current).data('caption');
+                        if(!!caption && caption.length > 0) {
+                            plugin.caption.fadeIn();
+                            $('p', plugin.caption).text(caption);
+                        }else{
+                            plugin.caption.hide();
+                        }
+                    },
+        
+                    resizeImage: function () {
+                        var ratio, wHeight, wWidth, iHeight, iWidth;
+                        wHeight = $(window).height() - opts.margin;
+                        wWidth = $(window).outerWidth(true) - opts.margin;
+                        plugin.image.width('').height('');
+                        iHeight = plugin.image.height();
+                        iWidth = plugin.image.width();
+                        if (iWidth > wWidth) {
+                            ratio = wWidth / iWidth;
+                            iWidth = wWidth;
+                            iHeight = Math.round(iHeight * ratio);
+                        }
+                        if (iHeight > wHeight) {
+                            ratio = wHeight / iHeight;
+                            iHeight = wHeight;
+                            iWidth = Math.round(iWidth * ratio);
+                        }
+        
+                        plugin.image.width(iWidth).height(iHeight).css({
+                    'top': ($(window).height() - plugin.image.outerHeight()) / 2 + 'px',
+                    'left': ($(window).width() - plugin.image.outerWidth()) / 2 + 'px'
+                  }).show();
+                        plugin.locked = false;
+                    },
+        
+                    getCurrentIndex: function () {
+                        return $.inArray(plugin.current, plugin.items);
+                    },
+        
+                    next: function () {
+                        if (plugin.locked) {
+                            return false;
+                        }
+                        plugin.locked = true;
+                        if (plugin.getCurrentIndex() >= plugin.items.length - 1) {
+                            $(plugin.items[0]).click();
+                        } else {
+                            $(plugin.items[plugin.getCurrentIndex() + 1]).click();
+                        }
+                    },
+        
+                    previous: function () {
+                        if (plugin.locked) {
+                            return false;
+                        }
+                        plugin.locked = true;
+                        if (plugin.getCurrentIndex() <= 0) {
+                            $(plugin.items[plugin.items.length - 1]).click();
+                        } else {
+                            $(plugin.items[plugin.getCurrentIndex() - 1]).click();
+                        }
+                    },
+        
+                    bindEvents: function () {
+                        $(plugin.items).click(function (e) {
+                            if(!$("#lightbox").is(":visible") && ($(window).width() < opts.minSize || $(window).height() < opts.minSize)) {
+                                $(this).attr("target", "_blank");
+                                return;
+                            }
+                            var self = $(this)[0];
+                            e.preventDefault();
+                            plugin.current = self;
+                            plugin.loadImage();
+        
+                            // Bind Keyboard Shortcuts
+                            $(document).on('keydown', function (e) {
+                                // Close lightbox with ESC
+                                if (e.keyCode === 27) {
+                                    plugin.close();
+                                }
+                                // Go to next image pressing the right key
+                                if (e.keyCode === 39) {
+                                    plugin.next();
+                                }
+                                // Go to previous image pressing the left key
+                                if (e.keyCode === 37) {
+                                    plugin.previous();
+                                }
+                            });
+                        });
+        
+                        // Add click state on overlay background only
+                        plugin.lightbox.on('click', function (e) {
+                            if (this === e.target) {
+                                plugin.close();
+                            }
+                        });
+        
+                        // Previous click
+                        $(plugin.lightbox).on('click', '.lightbox-previous', function () {
+                            plugin.previous();
+                            return false;
+                        });
+        
+                        // Next click
+                        $(plugin.lightbox).on('click', '.lightbox-next', function () {
+                            plugin.next();
+                            return false;
+                        });
+        
+                        // Close click
+                        $(plugin.lightbox).on('click', '.lightbox-close', function () {
+                            plugin.close();
+                            return false;
+                        });
+        
+                        $(window).resize(function () {
+                            if (!plugin.image) {
+                                return;
+                            }
+                            plugin.resizeImage();
+                        });
+                    },
+        
+                    close: function () {
+                        $(document).off('keydown'); // Unbind all key events each time the lightbox is closed
+                        $(plugin.lightbox).fadeOut('fast');
+                        $('body').removeClass('blurred');
+                    }
+                };
+        
+                $.extend(opts, options);
+        
+                plugin.init(this);
+            };
+        
+        })(jQuery);
+
+    </script>
+  {% endblock %}

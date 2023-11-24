@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result PDF</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+         h2 {
+            color: black;
+        }
+
+        p {
+            margin-bottom: 10px;
+            text-align: justify;
+            text-align: center;
+        }
+
+        strong {
+            
+            font-weight: bold;
+        }
+
+        hr {
+            opacity: 0.4;   
+        }
+        h1  {
+            color: #01c282;
+        }
+        li {
+            list-style-type: none;
+            font-size: 14px;
+
+        }
+        span {
+            opacity: 0.7;
+            margin-right: 20px;
+            font-size: 12;
+
+        }
+        .input-container {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+        }
+
+        .input-label {
+            font-weight: bold;
+            margin-bottom: 29px;
+        }
+        .input-item {
+            margin-bottom: 10px;
+        }
+        p span{
+            color: black;
+            text-align: center;
+        }
+        .name {
+            text-align: left;
+            margin-top: 15px;
+            font-size: 20p;
+        }
+        .analysis {
+        
+            margin: 5px;
+            opacity: 0.6;
+            text-align: justify;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+        <h1>Cougramtion</h1>
+        <p> {{ current_date }}</p>
+    </div>
+    <hr> 
+        <div class="name" style="font-size: 18px;">{{ prediction.first_name }} {{ prediction.last_name }},</p>
+        <p><strong>Here are your Inputs:</strong></p>
+        <div class="input-container">
+            <div class="input-item">
+                <span class="input-label">College Entrance Test</span>
+                <p><span>{{ prediction.cet }}</p></span>
+            </div>
+            <div class="input-item">
+                <span class="input-label">Senior High Grade 12 Gpa</span>
+                <p><span>{{ prediction.gpa }}</p></span>
+            </div>
+            <div class="input-item">
+                <span class="input-label">Senior High Strand</span>
+                <p><span>{{ prediction.strand }}</p></span>
+            </div>
+        </div>
+    
+        <hr> 
+    <p><strong>Based on your inputs, Your Recommended Courses:</p><strong><br>
+            {% for recommended in recommendeds %}
+                <li>
+                    <strong>{{ recommended.course }}</strong>
+                    <span>{{ recommended.percentage }}</span>
+                    <div class="analysis">{{ recommended.analysis }}</p>
+
+                </li>
+            {% endfor %}
+        
+        
+
+    
+</body>
+</html>

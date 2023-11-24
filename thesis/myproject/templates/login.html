@@ -1,0 +1,34 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    <link rel="icon" href="{% static 'images/logo.png' %}">
+</head>
+<body>
+    <div class="container flex">
+        <div class="cougramtion-page flex">
+            <div class="text">
+            <h1>CouGramTion</h1>
+            <h2>Discover the perfect course that matches your Academic Performance.</h2>
+            <h3>Try <span>CouGramTion</span> if still undecided!</h3>
+        <form action="{% url 'index' %}" method="post">
+        {% csrf_token %}
+            <input type="email" placeholder="Email" id="email" name="email" required>
+            <input type="password" placeholder="Password" id="password" name="password" required>
+            <div class="link">
+              <button type="submit" value="Login" class="login">Login</button>
+              <a href="#" class="forgot">Forgot password?</a>
+            </div>
+            <hr>
+            <div class="button">
+              <a href="Register">Signup</a>
+            </div>
+          </form>
+        </div>
+      </div>
+   
+</body>
+</html> {% endcomment %}
