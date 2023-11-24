@@ -1,0 +1,171 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+  }
+  
+  .container {
+    padding: 0 15px;
+    min-height: 100vh;
+    justify-content: center;
+    background: #ffffff;
+  }
+  
+  .cougramtion-page {
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+  }
+  
+  .cougramtion-page .text {
+    margin-bottom: 90px;
+  }
+  
+  .cougramtion-page h1 {
+    color: #01c282;
+    font-size: 2.8rem;
+    
+  }
+  
+  .cougramtion-page h2 {
+    font-size: 1.5rem;
+    width: 600px;
+    padding-bottom: 20px;
+  }
+  
+  span {
+      color: #01c282;
+  }
+  
+  form {
+      position: absolute;
+      top: 25%;
+      right: 100px;
+      left: 900px;
+      background: #01c282;
+      border-radius: 14px;
+      padding: 10px;
+      max-width: 350px;
+      
+  }
+  
+  form input {
+    height: 45px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    padding: 0 14px;
+  }
+  
+  form input:focus {
+    outline: none;
+    border-color: #01c282;
+  }
+  
+  ::placeholder {
+    color: #777;
+    font-size: 1rem;
+    
+  }
+  
+  .link {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .link .login {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #0569ff;
+    padding: 15px 0;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.2s ease;
+  }
+  
+  .link .login:hover {
+    background: #0d65d9;
+  }
+  
+  form a {
+    text-decoration: none;
+  }
+  
+  .link .forgot {
+    color: #061497;
+    font-size: 0.875rem;
+  }
+  
+  .link .forgot:hover {
+    text-decoration: underline;
+  }
+  
+  hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .button {
+    margin-top: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .button a {
+    padding: 12px 20px;
+    background: #0569ff;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    transition: 0.2s ease;
+  }
+  
+  .button a:hover {
+    background: #3ba626;
+  }
+
+  @media (max-width: 900px) {
+    .cougramtion-page {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .cougramtion-page .text {
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 460px) {
+    .cougramtion-page h1 {
+      font-size: 3.5rem;
+    }
+  
+    .cougramtion-page h2 {
+      font-size: 1.3rem;
+      
+    }
+  
+    form {
+      padding: 15px;
+    }
+  }
+   */
