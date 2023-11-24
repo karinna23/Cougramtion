@@ -1,0 +1,60 @@
+@import url(../Poppins/poppins.css);
+* {
+  font-family: "Poppins";
+  text-decoration: none;
+  list-style: none;
+}
+
+.navbar {
+  background: white;
+  z-index: 99;
+  height: 100px;
+  padding: 0 80px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.07);
+  top: 0;
+}
+.navbar .name-logo a {
+  font-size: 28px;
+  border-radius: 8px;
+  color: #01C282;
+}
+.navbar ul {
+  display: flex;
+  margin: 0;
+  gap: 5px;
+}
+.navbar ul a {
+  font-size: 18px;
+  color: #444444;
+  padding: 0 10px;
+  padding-bottom: 34px;
+}
+.navbar ul a:hover {
+  color: #01C282;
+  border-bottom: 4px solid #01C282;
+}
+.navbar ul a.active {
+  color: #01C282;
+  border-bottom: 4px solid #01C282;
+}
+.navbar a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.main #footer {
+  text-align: center;
+}
+.main #footer #go-top {
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.recommend #personal, .recommend #cet-next {
+  background: #B0B0B0;
+  border: none;
+}/*# sourceMappingURL=style.css.map */

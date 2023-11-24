@@ -1,0 +1,177 @@
+@import url('Poppins/poppins.css');
+
+*, body{
+font-family: 'Poppins', 'Times New Roman';
+font-size: 16px;
+}
+
+.main-container{
+margin-top: 100px;
+}
+
+.profile-progress {
+width: 50px;
+height: 50px;
+padding: 10px;
+background-color: #A9A9A9;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+align-content: center;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+}
+
+.bg-pending{
+border: 4px solid #01c282 !important;
+}
+
+.bg-white{
+background-color: white !important;
+}
+
+.bg-green{
+background-color: #01c282 !important;
+color: white;
+}
+
+.color-green{
+color: #01c282 !important;
+}
+
+.color-white{
+color: white !important;
+}
+
+a.back-button{
+border: 1px solid #01c282;
+background-color: white;
+color: #01c282;
+}
+
+.profile-progress-container {
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+align-content: center;
+justify-content: flex-start;
+align-items: center;
+}
+
+.profile-progress-container i.bx{
+color: white;
+font-size: 22px;
+}
+
+.profile-progress-container i.fa-solid{
+color: white;
+font-size: 16px;
+}
+
+.feature i.bx{
+font-size: 30px;
+}
+
+.profile-progress-container.wrapper::before {
+content: '';
+position: relative;
+top: 30px;
+left: -50%;
+border-top: 0.3rem solid #A9A9A9;
+width: 100%;
+z-index: -1;
+}
+
+.profile-progress-container.wrapper-green::before {
+content: '';
+position: relative;
+top: 30px;
+left: -50%;
+border-top: 0.3rem solid #01c282;
+width: 100%;
+z-index: -1;
+}
+
+.progress-bar-profile>*:first-child::before {
+width: 0;
+}
+
+button.next-button, a.back-button{
+max-width: 113px;
+}
+
+button.next-button.submit{
+max-width: 120px;
+width: 120px;
+}
+
+a.back-button:hover, a.back-button:focus{
+background-color: #01c282;
+}
+
+button.next-button:hover, button.next-button:focus{
+opacity: 0.9;
+}
+
+.pricing-header {
+max-width: 700px;
+margin-bottom: 2rem;
+}
+
+.programs-section {
+max-width: 960px;
+margin: auto;
+}
+
+.featurette-divider.sec-divider{
+margin: 2rem 0;
+height: 0;
+}
+
+.featurette-divider{
+margin: 2rem 0;
+}
+
+.featurette-heading{
+margin-top: 4rem;
+}
+
+p.justify{
+text-align: justify;
+}
+
+.bd-placeholder-img {
+font-size: 1.125rem;
+text-anchor: middle;
+-webkit-user-select: none;
+-moz-user-select: none;
+user-select: none;
+}
+
+.background-color-green{
+background-color: #01c282 !important;
+border-color: #01c282;
+}
+
+
+
+/* ---------- CET FORM ---------- */
+.cet-form {
+  gap: 20px;
+}
+
+.cet-form .input, .needs-validation .input{
+  width: 50%
+}
+
+.cet-form .actions, .needs-validation .action{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ---------- SHS BACKGROUND ---------- */
+.needs-validation .input{
+  margin-bottom: 20px;
+}
